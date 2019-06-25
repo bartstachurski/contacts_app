@@ -1,2 +1,6 @@
+array_of_contacts = []
 @contacts.each do |contact|
-  
+  array_of_contacts << {first_name: contact.first_name, last_name: contact.last_name, email: contact.email, phone_number: contact.phone_number}
+end
+
+array_of_contacts
