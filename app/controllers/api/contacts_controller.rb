@@ -24,7 +24,7 @@ class Api::ContactsController < ApplicationController
   def destroy
     @contact = Contact.find_by(id: params[:id])
     @contact.destroy
-    render 'delete.json.jb'
+    render 'destroy.json.jb'
   end
 
   def update
