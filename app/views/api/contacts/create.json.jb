@@ -1,1 +1,1 @@
-{message: "Contact saved!"}
+{message: "Contact #{@contact.first_name} #{@contact.last_name} created!"}
