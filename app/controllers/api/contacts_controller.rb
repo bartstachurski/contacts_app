@@ -1,7 +1,10 @@
 class Api::ContactsController < ApplicationController
 
   def index
-    @contacts = Contact.all
+    p "*" * 50
+    p current_user
+    p "*" * 50
+    @contacts = current_user.contacts
     render 'index.json.jb'
   end
 
@@ -17,7 +20,8 @@ class Api::ContactsController < ApplicationController
       email: params[:email],
       phone_number: params[:phone_number],
       middle_name: params[:middle_name],
-      bio: params[:bio]
+      bio: params[:bio],
+      user_id: current_user.id
       )
     if @contact.save
       render 'create.json.jb'

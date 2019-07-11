@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     post '/contacts' => 'contacts#create'
     delete '/contacts/:id' => 'contacts#destroy'
     patch '/contacts/:id' => 'contacts#update'
+    post '/users' => 'users#create'
+    post '/sessions' => 'sessions#create'
   end
 end
