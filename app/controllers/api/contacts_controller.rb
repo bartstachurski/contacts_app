@@ -1,10 +1,11 @@
 class Api::ContactsController < ApplicationController
 
   def index
-    p "*" * 50
-    p current_user
-    p "*" * 50
-    @contacts = current_user.contacts
+    if current_user
+      @contacts = current_user.contacts
+    else
+      @contacts = []
+    end
     render 'index.json.jb'
   end
 
