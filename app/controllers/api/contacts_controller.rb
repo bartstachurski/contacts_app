@@ -2,7 +2,12 @@ class Api::ContactsController < ApplicationController
 
   def index
     if current_user
-      @contacts = current_user.contacts
+      if params[:group]
+        group = Group.find_by(name: params[:name])
+        @contacts = group.contacts
+      else
+        @contacts = current_user.contacts
+      end
     else
       @contacts = []
     end

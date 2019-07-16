@@ -6,5 +6,6 @@
   email: contact.email,
   phone_number: contact.phone_number,
   bio: contact.bio,
-  friendly_updated_at: contact.friendly_updated_at
+  friendly_updated_at: contact.friendly_updated_at,
+  groups: contact.groups
   }
