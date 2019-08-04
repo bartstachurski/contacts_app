@@ -31,7 +31,7 @@ class Api::ContactsController < ApplicationController
       user_id: current_user.id
       )
     if @contact.save
-      render 'create.json.jb'
+      render 'show.json.jb'
     else
       render 'error.json.jb'
     end
@@ -53,7 +53,7 @@ class Api::ContactsController < ApplicationController
     @contact.bio = params[:bio] || @contact.bio
     @contact.save
     if @contact.save
-      render 'update.json.jb'
+      render 'show.json.jb'
     else
       render 'error.json.jb'
     end
